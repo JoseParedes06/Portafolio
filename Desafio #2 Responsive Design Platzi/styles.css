@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #003049;
+}
+html{
+    font-size: 62.5%;
+}
+body {
+    font-family: "open sans-serif";
+    font-size: 1.6rem;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid steelblue;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.logo strong {
+    margin-left: 5px;
+    font-size: 3rem;
+}
+.menu {
+    display: flex;
+    list-style: none;
+}
+.menu li {
+    margin: 0 5px;
+}
+.menu li a {
+    font-weight: 700;
+    text-decoration: none;
+}
+.content {
+    width: 100%;
+    padding: 20px 10px;
+    border: 1px 10px greenyellow;
+    text-align: center;
+}
+.platzi-team {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 15px;
+}
+.platzi-team img {
+    width: 100%;
+}
+.routes {
+    padding: 20px 10px;
+    border: 1px solid greenyellow;
+}
+.routes h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+.routes-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+}
+.routes-images img {
+    width: 100%;
+    max-width: 298px;
+    height: 82px;
+}
+.footer {
+    display: flex;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid orange;
+    justify-content: center;
+    align-items: center;
+}
+.footer p {
+    font-weight: 700;
+}
