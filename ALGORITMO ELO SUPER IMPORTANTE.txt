@@ -1,0 +1,43 @@
+const valor_ajustado = 100;
+const k = valor_ajustado;
+
+// Poner jugadores que sean necesarios.
+const jugadores = [
+      { nombre: "Jugador1", Elo: 1400 },
+      { nombre: "Jugador2", Elo: 1400 },
+];
+// 1ra funcion (Funcion del Random player)
+function elegirJugadorRandom() {
+      return jugadores[Math.floor(Math.random() * jugadores.length)];
+}
+// 2da funcion (Funcion del calculo)
+function probabilidades() {
+      const sumaPuntuaciones = jugadores.reduce((total, jugador) => total + jugador.Elo, 0);
+      return Elo / sumaPuntuaciones
+}
+// 3ra function (Funcion de eleccion)
+function eleccion() {
+      alert("Jugadores: ");
+      jugadores.forEach((jugador, index) => {
+            alert(`${index + 1}. ${jugador.nombre} (elo: ${jugador.Elo})`);
+      });
+
+      const seleccion = parseInt(prompt("Elige a quien quieres elegir. ")) - 1;
+
+      if (seleccion >= 0 && seleccion < jugadores.length) {
+            const jugadorSeleccionado = jugadores[seleccion];
+            const probabilidadElegir = probabilidades(jugadorSeleccionado.Elo);
+            const numeroAleatorio = Math.random();
+
+            if (numeroAleatorio <= probabilidadElegir) {
+                  jugadorSeleccionado.Elo -= k;
+                  alert(`${jugadorSeleccionado.nombre} fue elegido. ELO: ${jugadorSeleccionado.Elo}`);
+            } else {
+                  alert(`${jugadorSeleccionado.nombre} no fue elegido. ELO: ${jugadorSeleccionado.Elo}`);
+            }
+      } else {
+            alert("Seleccion invalida.");
+      }
+}
+
+eleccion();
